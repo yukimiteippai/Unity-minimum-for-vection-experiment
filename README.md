@@ -104,7 +104,7 @@ Inspectorウィンドウではカメラの場合は図のような感じです�
 
 Transformはオブジェクトの位置や方向、大きさを設定するものなので、Inspectorで数字を変えれば連動してSceneの内容も変わります。
 逆に、Sceneの方で選択したオブジェクトから出ているxyzの矢印をドラッグしても移動でき、その際はInspectorの数値が変更されます。
-w/e/rでposition/rotate/scaleのUIを切り替えることができます（右図）。
+w/e/rでposition/rotate/scaleのUIを切り替えることができます（図）。
 
 
 ![image](https://docs.unity3d.com/uploads/Main/TransformGizmo35.png)
