@@ -1,1 +1,94 @@
 # -Unity-
+
+
+
+#０．はじめに
+妹尾研の視覚実験に必要なUnityのミニマム講座。
+WindowsでPCの空き領域が10GBあるのが望ましい。
+C#プログラミングの基礎知識があった方がよい。
+int, float, 関数、くらいのプログラミングの語句は逐次調べてもらってもよいですが、前提知識としてあった方がよいです。
+Unity初心者向け。
+
+
+#１．Unity hubのダウンロード
+Unity Hubをインストールしてください。
+https://unity3d.com/get-unity/download
+
+※Unity hubのインストールがうまくいかない場合、旧バージョンをインストール後、更新する方法が有効でした。以下では非公式に旧バージョンを入手できます。
+https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13228982998
+
+Unity hubのダウンロードページの右上に以下のシステム要件が書いてあります。
+
+> System requirements
+> OS: Windows 7 SP1+, 8, 10, 64-bit versions only; Mac OS X 10.12+; Ubuntu 16.04, 18.04, and CentOS 7.
+> GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+
+Unityだけで3.5GB、Visual Studioだけで最低5GB、SSDやHDDの空き領域が必要なので、ご注意ください。
+
+本資料ではWindowsを前提に進めているので、多少Macの場合は自分で調べて補う必要があるかもしれません。
+
+２．Unityのダウンロード
+Unity Hubを起動し、インストールの項目からUnityをインストールしてください。
+この資料では2020.3.14f1のバージョンを使います。
+
+※いくつかダウンロードの選択肢がありますが、デフォルトのままでインストールするとvisual studio community 2019がインストールされます。
+
+ 
+
+３．プロジェクトの新規作成
+Unity Hubの右上のボタン「新規作成」を押す
+
+テンプレートやプロジェクト名や保存先が選べる。
+デフォルトの状態（3D, New Unity Project, C:\Users\yuki）で右下の「作成」を押してよい。
+プロジェクト名や保存先は適宜変えてよい。
+以下は初期の画面。
+ 
+画面下部に以下のような警告が出る場合は、
+ 
+下記URLに従って更新後、Unityを再起動をすると警告が消えるみたいです。
+https://baba-s.hatenablog.com/entry/2021/07/14/180000
+
+４．HierarchyウィンドウとGameObject
+
+HierarchyにはSampleSceneの中にMain CameraとDirectiona Lightがあり、シーンの中に二つのオブジェクトが含まれている階層構造がわかります。
+
+
+これらのカメラやライト、その他これからシーン内に作成するオブジェクトはGameObjectと呼ばれ、上部メニューやHierarchyの左上の＋ボタンなどから追加することができます。
+
+右図はGameObjectの3D Objectの例です。
+他のも見てみてください。
+
+
+
+
+５．GameObjectのCameraとScene・Game・Inspectorウィンドウ
+今あるMainCameraを選択すると、Sceneウィンドウ、Inspectorウィンドウではこのオブジェクトの情報の表示に切り替わります。
+オブジェクトの選択はSceneウィンドウ上でもクリックすることで行うことができます。
+   
+↑何も選択されていない状態(左)と選択された状態(右)
+
+Gameウィンドウにはカメラから見えるプログラム実行時の画面が表示されます。
+
+Sceneウィンドウは開発者のためのオブジェクトの俯瞰図が表示されます。
+右ドラッグで見る方向、
+スクロールドラッグで上下左右の平行移動、
+右上のxyzの円錐の選択でxyz軸に平行な視線を選べます。
+また、この中心のcubeをクリックすると、並行投影と透視投影の切り替えができます。
+スクロールで拡大縮小ができます。
+
+Inspectorウィンドウではカメラの場合は右図のような感じです。
+
+中身の詳細な説明はウェブにUnityのマニュアルがあるので、そちらを参考にしてください。
+
+Transformのマニュアル
+Cameraのマニュアル
+
+マニュアルのページではunityのversionや表示言語が選べます。
+
+Transformはオブジェクトの位置や方向、大きさを設定するものなので、Inspectorで数字を変えれば連動してSceneの内容も変わります。
+逆に、Sceneの方で選択したオブジェクトから出ているxyzの矢印をドラッグしても移動でき、その際はInspectorの数値が変更されます。
+w/e/rでposition/rotate/scaleのUIを切り替えることができます（右図）。
+
+
+
+ 
