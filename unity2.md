@@ -1,6 +1,6 @@
 # ６．GameObjectの作成と移動
 
-6.1 Hierarchyウィンドウ・GameObjectメニューから作る方法
+## 6.1 Hierarchyウィンドウ・GameObjectメニューから作る方法
 Hierarchyウィンドウの左上の＋ボタンから3Dobject→cubeと選ぶと1x1x1（単位はm）のサイズの立方体が作成されます。
 Effectのparticleなども宇宙的なビジュアルを作るのに良いかもしれません。
 参考：https://ekulabo.com/game-object-effects
