@@ -191,3 +191,87 @@ void FixedUpdate()
 ![image](https://user-images.githubusercontent.com/5643842/127962892-9a39b6e0-cb53-4ad1-aee7-80a8549f113f.png)
 
 
+## 6.5 絶え間なくオブジェクトを流す
+![image](https://user-images.githubusercontent.com/5643842/127971676-f126f7bf-050e-45f2-800d-59ce826445b1.png)![image](https://user-images.githubusercontent.com/5643842/127971683-c1dd3f40-62f5-49e7-add4-ad9384f7192d.png)![image](https://user-images.githubusercontent.com/5643842/127971687-f81a67ef-28b1-462a-a661-22b734e348f3.png)
+
+視界から消えたオブジェクトを繰り返し初期位置に戻して動かすようにしましょう。
+プログラム全体は6.5の最後に記載しています。
+
+1. カメラの位置を調整する。図と同じに設定しましょう。
+
+![image](https://user-images.githubusercontent.com/5643842/127971711-adac0c91-a879-4081-bc8d-1bcd680cb9ae.png)
+
+ 
+2. cubesのZ値をばらつかせる（カメラのZ位置から0までの間でランダムに）
+一つ一つのcubeの位置を乱数で以下のように決めるとz値をばらつかせることができます。
+```
+float zz = Random.Range(Camera.main.transform.position.z, 0f);
+```
+ただ、これだとcube同士が重なることがあります。
+簡易的にそれを回避するには、x,y,zのどれかだけでも重ならないように以下のように区切った範囲内で乱数を生成するとよいです。
+```
+float dz = Camera.main.transform.position.z / cubes.Length;
+float zz = Random.Range(dz * i, dz * (i + 1) - csize);
+```
+Camera.main.transform.position.zはMain Cameraのz位置です。
+スクリプトから外部のGameObjectへのアクセスは通常は少し面倒ですが、Main Cameraはこのように簡単にアクセスできるようになっています。
+この辺の少し詳しいことは以下のリンクを参照するとよいです。他のGameObjectへのアクセス方法がわかります。  
+参考：https://tech.pjin.jp/blog/2018/01/31/unity_get-main-camera/
+
+
+3. cubesがカメラより後ろに行ったら、位置をz=0に戻す
+これは単純にFixedUpdate()内でそのように処理するだけです。
+注意としては、x,yの値は変えないようにすることです。
+
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    GameObject[] cubes;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        cubes = new GameObject[500];
+        float radi = 2.0f;
+        float csize = 0.1f;
+
+        for (int i = 0; i < cubes.Length; i++)
+        {
+            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cubes[i].name = "Cube" + i.ToString();
+            float xx = Random.Range(-1f * radi, 1f * radi);
+            float yy = Random.Range(-1f * radi, 1f * radi);
+            //float zz = Random.Range(Camera.main.transform.position.z, 0f);
+            //↑z=カメラのZ位置(-30にUnity上で設定)～0
+            //簡易的に重なりを防ぐ：Z値の位置をずらす
+            float dz = Camera.main.transform.position.z / cubes.Length;
+            float zz = Random.Range(dz * i, dz * (i + 1) - csize);
+            cubes[i].transform.position = new Vector3(xx, yy, zz);
+            cubes[i].transform.localScale = new Vector3(csize, csize, csize);
+        }
+    }
+
+    // Update is called once per frame
+    void Update() { }
+
+    void FixedUpdate()
+    {
+        for (int i = 0; i < cubes.Length; i++)
+        {
+            cubes[i].transform.Translate(0f, 0f, -0.1f);
+            //cubeがカメラより後ろに行ったら、初期位置z=0に戻す
+            Vector3 cube = cubes[i].transform.position;
+            if (cube.z < Camera.main.transform.position.z)
+            {
+                cubes[i].transform.position = new Vector3(cube.x, cube.y, 0f);
+            }
+        }
+    }
+}
+```
+
+
