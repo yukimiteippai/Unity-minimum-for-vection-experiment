@@ -106,7 +106,7 @@ Transformはオブジェクトの位置や方向、大きさを設定するも�
 逆に、Sceneの方で選択したオブジェクトから出ているxyzの矢印をドラッグしても移動でき、その際はInspectorの数値が変更されます。
 w/e/rでposition/rotate/scaleのUIを切り替えることができます（右図）。
 
-![c](https://user-images.githubusercontent.com/5643842/127956284-1090b1bd-77fb-49d8-a076-53e643e694fc.png)
 
+![image](https://docs.unity3d.com/uploads/Main/TransformGizmo35.png)
 
  
