@@ -1,8 +1,4 @@
-# -Unity-
-
-
-
-#０．はじめに
+# ０．はじめに
 妹尾研の視覚実験に必要なUnityのミニマム講座。
 WindowsでPCの空き領域が10GBあるのが望ましい。
 C#プログラミングの基礎知識があった方がよい。
@@ -10,7 +6,7 @@ int, float, 関数、くらいのプログラミングの語句は逐次調べ�
 Unity初心者向け。
 
 
-#１．Unity hubのダウンロード
+# １．Unity hubのダウンロード
 Unity Hubをインストールしてください。
 https://unity3d.com/get-unity/download
 
@@ -27,7 +23,7 @@ Unityだけで3.5GB、Visual Studioだけで最低5GB、SSDやHDDの空き領域
 
 本資料ではWindowsを前提に進めているので、多少Macの場合は自分で調べて補う必要があるかもしれません。
 
-２．Unityのダウンロード
+# ２．Unityのダウンロード
 Unity Hubを起動し、インストールの項目からUnityをインストールしてください。
 この資料では2020.3.14f1のバージョンを使います。
 
@@ -35,7 +31,7 @@ Unity Hubを起動し、インストールの項目からUnityをインストー
 
  
 
-３．プロジェクトの新規作成
+# ３．プロジェクトの新規作成
 Unity Hubの右上のボタン「新規作成」を押す
 
 テンプレートやプロジェクト名や保存先が選べる。
@@ -48,7 +44,7 @@ Unity Hubの右上のボタン「新規作成」を押す
 下記URLに従って更新後、Unityを再起動をすると警告が消えるみたいです。
 https://baba-s.hatenablog.com/entry/2021/07/14/180000
 
-４．HierarchyウィンドウとGameObject
+# ４．HierarchyウィンドウとGameObject
 
 HierarchyにはSampleSceneの中にMain CameraとDirectiona Lightがあり、シーンの中に二つのオブジェクトが含まれている階層構造がわかります。
 
@@ -61,7 +57,7 @@ HierarchyにはSampleSceneの中にMain CameraとDirectiona Lightがあり、シ
 
 
 
-５．GameObjectのCameraとScene・Game・Inspectorウィンドウ
+# ５．GameObjectのCameraとScene・Game・Inspectorウィンドウ
 今あるMainCameraを選択すると、Sceneウィンドウ、Inspectorウィンドウではこのオブジェクトの情報の表示に切り替わります。
 オブジェクトの選択はSceneウィンドウ上でもクリックすることで行うことができます。
    
