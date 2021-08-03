@@ -40,9 +40,11 @@ Unity Hubの右上のボタン「新規作成」を押す
 デフォルトの状態（3D, New Unity Project, C:\Users\yuki）で右下の「作成」を押してよい。
 プロジェクト名や保存先は適宜変えてよい。
 以下は初期の画面。
- ![image](https://user-images.githubusercontent.com/5643842/127955453-c91d243d-c182-4dd0-9819-eae33900a209.png)
+
+![a](https://user-images.githubusercontent.com/5643842/127955755-e0abb4f2-a629-4eb5-8c96-068f05497018.png)
 
 画面下部に以下のような警告が出る場合は、
+
  ![image](https://user-images.githubusercontent.com/5643842/127955464-73c546e2-059d-4d11-91c4-2bc8c103f45d.png)
 
 下記URLに従って更新後、Unityを再起動をすると警告が消えるみたいです。
@@ -50,13 +52,18 @@ https://baba-s.hatenablog.com/entry/2021/07/14/180000
 
 # ４．HierarchyウィンドウとGameObject
 
+![image](https://user-images.githubusercontent.com/5643842/127955498-21211fe9-67e4-4c74-ba97-03256bf384a6.png)
+
 HierarchyにはSampleSceneの中にMain CameraとDirectiona Lightがあり、シーンの中に二つのオブジェクトが含まれている階層構造がわかります。
 
 
 これらのカメラやライト、その他これからシーン内に作成するオブジェクトはGameObjectと呼ばれ、上部メニューやHierarchyの左上の＋ボタンなどから追加することができます。
 
-右図はGameObjectの3D Objectの例です。
+図はGameObjectの3D Objectの例です。
 他のも見てみてください。
+
+![image](https://user-images.githubusercontent.com/5643842/127955539-bc192d95-9d3d-413a-b31d-7baa28e4a984.png)
+
 
 
 
@@ -64,7 +71,9 @@ HierarchyにはSampleSceneの中にMain CameraとDirectiona Lightがあり、シ
 # ５．GameObjectのCameraとScene・Game・Inspectorウィンドウ
 今あるMainCameraを選択すると、Sceneウィンドウ、Inspectorウィンドウではこのオブジェクトの情報の表示に切り替わります。
 オブジェクトの選択はSceneウィンドウ上でもクリックすることで行うことができます。
-   
+
+![image](https://user-images.githubusercontent.com/5643842/127955545-0bdcffd3-27b8-4175-8f41-d7b2eac12c8e.png) ![image](https://user-images.githubusercontent.com/5643842/127955551-dfea6ad0-84cd-4601-ad3f-bfc17ce8835c.png)
+
 ↑何も選択されていない状態(左)と選択された状態(右)
 
 Gameウィンドウにはカメラから見えるプログラム実行時の画面が表示されます。
@@ -76,12 +85,14 @@ Sceneウィンドウは開発者のためのオブジェクトの俯瞰図が表
 また、この中心のcubeをクリックすると、並行投影と透視投影の切り替えができます。
 スクロールで拡大縮小ができます。
 
-Inspectorウィンドウではカメラの場合は右図のような感じです。
+Inspectorウィンドウではカメラの場合は図のような感じです。
+
+![b](https://user-images.githubusercontent.com/5643842/127955966-7e64390c-6764-4a75-abf5-b1da7eb86adf.png)
 
 中身の詳細な説明はウェブにUnityのマニュアルがあるので、そちらを参考にしてください。
 
-Transformのマニュアル
-Cameraのマニュアル
+[Transformのマニュアル](https://docs.unity3d.com/Manual/class-Transform.html)
+[Cameraのマニュアル](https://docs.unity3d.com/ja/2020.3/Manual/class-Camera.html)
 
 マニュアルのページではunityのversionや表示言語が選べます。
 
