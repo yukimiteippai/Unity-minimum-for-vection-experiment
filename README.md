@@ -29,6 +29,8 @@ Unity Hubを起動し、インストールの項目からUnityをインストー
 
 ※いくつかダウンロードの選択肢がありますが、デフォルトのままでインストールするとvisual studio community 2019がインストールされます。
 
+![image](https://user-images.githubusercontent.com/5643842/127955424-6472320f-b784-413d-a971-517bc5593c22.png)
+
  
 
 # ３．プロジェクトの新規作成
@@ -38,9 +40,11 @@ Unity Hubの右上のボタン「新規作成」を押す
 デフォルトの状態（3D, New Unity Project, C:\Users\yuki）で右下の「作成」を押してよい。
 プロジェクト名や保存先は適宜変えてよい。
 以下は初期の画面。
- 
+ ![image](https://user-images.githubusercontent.com/5643842/127955453-c91d243d-c182-4dd0-9819-eae33900a209.png)
+
 画面下部に以下のような警告が出る場合は、
- 
+ ![image](https://user-images.githubusercontent.com/5643842/127955464-73c546e2-059d-4d11-91c4-2bc8c103f45d.png)
+
 下記URLに従って更新後、Unityを再起動をすると警告が消えるみたいです。
 https://baba-s.hatenablog.com/entry/2021/07/14/180000
 
