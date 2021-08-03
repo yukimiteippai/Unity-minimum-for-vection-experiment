@@ -48,7 +48,11 @@ Unity Hubの右上のボタン「新規作成」を押す
  ![image](https://user-images.githubusercontent.com/5643842/127955464-73c546e2-059d-4d11-91c4-2bc8c103f45d.png)
 
 下記URLに従って更新後、Unityを再起動をすると警告が消えるみたいです。
+
 https://baba-s.hatenablog.com/entry/2021/07/14/180000
+
+
+
 
 # ４．HierarchyウィンドウとGameObject
 
@@ -89,10 +93,9 @@ Inspectorウィンドウではカメラの場合は図のような感じです�
 
 ![b](https://user-images.githubusercontent.com/5643842/127955966-7e64390c-6764-4a75-abf5-b1da7eb86adf.png)
 
-中身の詳細な説明はウェブにUnityのマニュアルがあるので、そちらを参考にしてください。
+中身の詳細な説明はウェブにUnityのマニュアルがあるので、そちらを参照してください。
 
-[Transformのマニュアル](https://docs.unity3d.com/Manual/class-Transform.html)
-[Cameraのマニュアル](https://docs.unity3d.com/ja/2020.3/Manual/class-Camera.html)
+[Transformのマニュアル](https://docs.unity3d.com/Manual/class-Transform.html)　[Cameraのマニュアル](https://docs.unity3d.com/ja/2020.3/Manual/class-Camera.html)
 
 マニュアルのページではunityのversionや表示言語が選べます。
 
@@ -100,6 +103,7 @@ Transformはオブジェクトの位置や方向、大きさを設定するも�
 逆に、Sceneの方で選択したオブジェクトから出ているxyzの矢印をドラッグしても移動でき、その際はInspectorの数値が変更されます。
 w/e/rでposition/rotate/scaleのUIを切り替えることができます（右図）。
 
+![c](https://user-images.githubusercontent.com/5643842/127956284-1090b1bd-77fb-49d8-a076-53e643e694fc.png)
 
 
  
