@@ -65,24 +65,24 @@ public class NewBehaviourScript : MonoBehaviour
 }
 ``` 
 
-Emptyオブジェクトに適用するプログラム（class）の中身を記述していく形となります。
-Start関数にはこのオブジェクトが生成されたときに一度だけ行う処理
-（例えばこのオブジェクトの設定等）、
-Update関数にはその後、1秒間に何十回も繰り返す処理
-（例えばこのオブジェクトの移動等）
+Emptyオブジェクトに適用するプログラム（class）の中身を記述していく形となります。  
+Start関数にはこのオブジェクトが生成されたときに一度だけ行う処理  
+（例えばこのオブジェクトの設定等）、  
+Update関数にはその後、1秒間に何十回も繰り返す処理  
+（例えばこのオブジェクトの移動等）  
 を記述します。
 
 Emptyオブジェクトは空なので、まずはStart関数でGameObjectを生成してみます。  
 Start関数に以下を記述し、プログラムを保存してください（short cut key = Ctrl+s）。  
-        ~GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);~
+        ``` GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);``` 
 
 次に、Unity画面の上部中央にある再生ボタンを押しましょう。
 (short cut key = Ctrl+p)
 
 ![image](https://user-images.githubusercontent.com/5643842/127962384-78a8a36e-d63c-4912-851d-b8b12c8bbf10.png)
 
-Sceneウィンドウにあるxyzの軸だけで何もないのがEmptyです。
-Gameウィンドウでは最初にHierarchyから追加したcubeのほかにもう一つ、スクリプトで作成されたcubeが表示されます(右図)。
-※Sceneウィンドウには、動的に生成されるオブジェクトは表示されないので注意。
+Sceneウィンドウにあるxyzの軸だけで何もないのがEmptyです。  
+Gameウィンドウでは最初にHierarchyから追加したcubeのほかにもう一つ、スクリプトで作成されたcubeが表示されます(図)。  
+※Sceneウィンドウには、動的に生成されるオブジェクトは表示されないので注意。  
 
 右図の左は非実行時、右は実行時のHierarchyを示しています。実行時にCubeがもう一つ作成されています。
