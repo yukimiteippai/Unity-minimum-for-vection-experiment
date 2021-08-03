@@ -1,4 +1,5 @@
-[TOC]
+<!-- START doctoc -->
+<!-- END doctoc -->
 
 # ０．はじめに
 妹尾研の視覚実験に必要なUnityのミニマム講座。
