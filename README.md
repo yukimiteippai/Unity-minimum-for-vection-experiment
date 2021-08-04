@@ -19,12 +19,12 @@
 5. GameObjectのCameraとScene・Game・Inspectorウィンドウ
 
 ### unity2:
-6. GameObjectの作成と移動
-6.1 Hierarchyウィンドウ・GameObjectメニューから作る方法
-6.2 プログラムで作成する方法
-6.3 移動
-6.4 オブジェクトを増やす
-6.6 プリミティブ以外の形状を使いたいとき（おまけ）
+6. GameObjectの作成と移動  
+6.1 Hierarchyウィンドウ・GameObjectメニューから作る方法  
+6.2 プログラムで作成する方法  
+6.3 移動  
+6.4 オブジェクトを増やす  
+6.6 プリミティブ以外の形状を使いたいとき（おまけ）  
 
 ### unity3:
 7. 材質の指定
