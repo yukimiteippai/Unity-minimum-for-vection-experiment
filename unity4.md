@@ -278,6 +278,12 @@ setVisibleではbbがtrueの場合テキストを黒、falseの場合透明に�
 参考：https://techno-monkey.hateblo.jp/entry/2018/05/09/120653
 
 setActiveを使った場合、一度非アクティブにしてしまうと以降のコンポーネントへのアクセスがエラーになってしまうので、ここでは透明色を使いました。
+最後はこうなるはずです↓
+
+
+https://user-images.githubusercontent.com/5643842/128693992-d014a3d4-8599-4ebd-b82f-10746a0c200c.mp4
+
+
 
 
 
