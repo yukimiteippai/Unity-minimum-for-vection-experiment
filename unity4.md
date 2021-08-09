@@ -171,16 +171,60 @@ IEnumerator WaitProcess()
         //cubesを非Activeにする
         cubes[i].SetActive(false);
     }
-    //CanvasをActiveにする
+    //CanvasをActiveにする　※以前はここでcanvasを定義していたがclassの最初にメンバとして定義に変更。findはStartで。
     canvas.SetActive(true);
-    //表示テキストを変える　※注意
+    //表示テキストを変える　※
     //text1.text = "上下の矢印で強度を入力しEnterキーを押す";
-    // ti.setVisible(true);
+    //ti.setVisible(true);
 }
 ```
 
-WaitProcessを上記のように変えると、t秒後に最初と同じテキストが表示されます。
-最後にGameObject.Findを使ってText1を取得し、テキストを変更しようとするとエラーが出ます。
+WaitProcessを上記のように、プログラムの冒頭を下記のように変えると、t秒後に最初と同じテキストが表示されます。WaitProcessの最後のコメントアウトを取ると最後に表示されるテキストが変わります。
+
+```
+public class NewBehaviourScript : MonoBehaviour
+{
+    GameObject[] cubes;
+    GameObject canvas;  //Ganvasオブジェクト取得用
+    Text text1;         //Text1オブジェクト取得用
+    TextIntensity ti;   //TextIntensityオブジェクト取得用
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        cubes = new GameObject[500];
+        float radi = 2.0f;
+        float csize = 0.1f;
+
+        for (int i = 0; i < cubes.Length; i++)
+        {
+            cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            cubes[i].name = "Cube" + i.ToString();
+            float xx = Random.Range(-1f * radi, 1f * radi);
+            float yy = Random.Range(-1f * radi, 1f * radi);
+            //float zz = Random.Range(Camera.main.transform.position.z, 0f);
+            //↑z=カメラのZ位置(-30にUnity上で設定)～0
+            //簡易的に重なりを防ぐ：Z値の位置をずらす
+            float dz = Camera.main.transform.position.z / cubes.Length;
+            float zz = Random.Range(dz * i, dz * (i + 1) - csize);
+            cubes[i].transform.position = new Vector3(xx, yy, zz);
+            cubes[i].transform.localScale = new Vector3(csize, csize, csize);
+            cubes[i].SetActive(false);
+        }
+        //Canvasを取得してcanvasに代入
+        canvas = GameObject.Find("Canvas");
+        //componentの取得↓子階層のComponentを取得する
+        text1 = canvas.GetComponentInChildren<Text>();
+        ti = canvas.GetComponentInChildren<TextIntensity>();
+        //テキストの設定
+        text1.text = "動きを知覚している間スペースを押し続けてください\n（escで実験を強制終了）";
+        ti.setVisible(false);
+
+        StartCoroutine(WaitProcess());      
+    }
+```
+
+
 
 
 
@@ -232,5 +276,9 @@ setVisibleではbbがtrueの場合テキストを黒、falseの場合透明に�
 それぞれ長所短所があるので詳しい解説は以下を見てください。
 
 参考：https://techno-monkey.hateblo.jp/entry/2018/05/09/120653
+
+setActiveを使った場合、一度非アクティブにしてしまうと以降のコンポーネントへのアクセスがエラーになってしまうので、ここでは透明色を使いました。
+
+
 
 
