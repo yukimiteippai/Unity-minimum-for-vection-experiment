@@ -45,7 +45,7 @@ Camvas内にImageとTextを両方配置すると、CanvasのInspectorのチェ�
 
 待ち時間の参考：https://ekulabo.com/coroutine-wait
 
-下記のページを参考に作成したプログラムが以下になります。
+上記のページを参考に作成したプログラムが以下になります。
 ```
 using System.Collections;
 using System.Collections.Generic;
