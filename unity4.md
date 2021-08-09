@@ -281,7 +281,9 @@ setActiveを使った場合、一度非アクティブにしてしまうと以�
 最後はこうなるはずです↓
 
 
-https://user-images.githubusercontent.com/5643842/128693992-d014a3d4-8599-4ebd-b82f-10746a0c200c.mp4
+
+https://user-images.githubusercontent.com/5643842/128694242-70c18e4c-e314-4296-84ca-46a131642e00.mp4
+
 
 
 
