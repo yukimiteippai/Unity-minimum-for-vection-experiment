@@ -186,8 +186,8 @@ public class NewBehaviourScript : MonoBehaviour
 {
     GameObject[] cubes;
     GameObject canvas;  //Ganvasオブジェクト取得用
-    Text text1;         //Text1オブジェクト取得用
-    TextIntensity ti;   //TextIntensityオブジェクト取得用
+    Text text1;         //Text1コンポーネント取得用
+    TextIntensity ti;   //TextIntensityコンポーネント取得用
 
     // Start is called before the first frame update
     void Start()
