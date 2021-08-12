@@ -133,7 +133,7 @@ public class NewBehaviourScript : MonoBehaviour
 SceneManager.LoadSceneでシーンをロードした場合、lightingがおかしくなります。
 Lightingウィンドウを開き、設定を変更しましょう。
 
-**Lighitngウィンドウ**：https://docs.unity3d.com/ja/2018.4/Manual/GlobalIllumination.html
+**Lighitngウィンドウ**：https://docs.unity3d.com/ja/2018.4/Manual/GlobalIllumination.html  
 **ライトマッピング**：https://docs.unity3d.com/ja/2018.4/Manual/Lightmapping.html
 
 照明の計算を毎フレーム行うのは計算コストが高いです。
