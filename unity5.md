@@ -133,8 +133,8 @@ public class NewBehaviourScript : MonoBehaviour
 SceneManager.LoadSceneでシーンをロードした場合、lightingがおかしくなります。
 Lightingウィンドウを開き、設定を変更しましょう。
 
-*Lighitngウィンドウ*：https://docs.unity3d.com/ja/2018.4/Manual/GlobalIllumination.html
-*ライトマッピング*：https://docs.unity3d.com/ja/2018.4/Manual/Lightmapping.html
+**Lighitngウィンドウ**：https://docs.unity3d.com/ja/2018.4/Manual/GlobalIllumination.html
+**ライトマッピング**：https://docs.unity3d.com/ja/2018.4/Manual/Lightmapping.html
 
 照明の計算を毎フレーム行うのは計算コストが高いです。
 ライトマッピングは、シーンのサーフェスの明るさを事前計算し、あとで使用することで計算コストを節約しているようですが、LoadSceneを使うとき、ライトマップを再計算しないとおかしな照明になってしまいます。
@@ -144,4 +144,11 @@ Lightingウィンドウを開き、設定を変更しましょう。
 Lightingタブを見てください。
 このままだとsettingは変えられないので、Sceneタブ上部にある*New Lighting Settings*を選ぶと、新しい設定ができるようになります。
 Lightingタブの下部にあるWorkflow Settingsの*Auto Generate*をチェックすると、ライトマップを更新することができます。
+
+
+
+
+https://user-images.githubusercontent.com/5643842/129184559-8aa14f90-0c2b-4027-ab05-6070e8307ae3.mp4
+
+
 
