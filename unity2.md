@@ -213,9 +213,10 @@ void FixedUpdate()
 ![image](https://user-images.githubusercontent.com/5643842/127971676-f126f7bf-050e-45f2-800d-59ce826445b1.png)![image](https://user-images.githubusercontent.com/5643842/127971683-c1dd3f40-62f5-49e7-add4-ad9384f7192d.png)![image](https://user-images.githubusercontent.com/5643842/127971687-f81a67ef-28b1-462a-a661-22b734e348f3.png)
 
 視界から消えたオブジェクトを繰り返し初期位置に戻して動かすようにしましょう。
-プログラム全体は6.5の最後に記載しています。
+プログラム全体は最後に記載しています。
 
-8.1. カメラの位置を調整する。図と同じに設定しましょう。  
+8.1. カメラの位置を調整する。　　
+図と同じに設定しましょう。  
 
 ![image](https://user-images.githubusercontent.com/5643842/127971711-adac0c91-a879-4081-bc8d-1bcd680cb9ae.png)
 
