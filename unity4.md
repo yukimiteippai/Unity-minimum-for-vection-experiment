@@ -7,13 +7,15 @@ Hierarchyの＋ボタンから、　
 
 を選びます。
 
-Canvasの子としてTextが作られ、EventSystemも同時に作成されます。
+Canvasの子としてTextが作られ、EventSystemも同時に作成されます。  
+（親子関係について：https://dkrevel.com/makegame-beginner/parent/）  
 図の例ではText1にリネームしています↓
 
 ![image](https://user-images.githubusercontent.com/5643842/128685175-b275b8e3-e28e-4cbd-a5a5-c78024db61c2.png)
 
 
-InspectorのRect TransformやTextで、テキストボックスのサイズやテキストの編集ができます（詳しくはこちらを参照：https://www.sejuku.net/blog/55029）。
+InspectorのRect TransformやTextで、テキストボックスのサイズやテキストの編集ができます  
+（詳しくはこちらを参照：https://www.sejuku.net/blog/55029）。
 
 ![image](https://user-images.githubusercontent.com/5643842/128685190-723932c4-64f8-4829-98a5-912314094465.png) ![image](https://user-images.githubusercontent.com/5643842/128685206-722fe746-a078-4e93-a65a-6232ddcffd03.png)
 
@@ -29,11 +31,14 @@ InspectorのRect TransformやTextで、テキストボックスのサイズや�
 
 ## 9.2 テキストを表示と実験のタイミング制御
 
-文字が見づらいので　UI>Image　を文字の背景として作成し、Canvas内に配置します。
-このとき、ImageをTextより上に置くことで、画面上の前後関係でImageを奥にします。
-※ImageとTextはInspectorのRect TransformでPos Zを変更しても奥行に反映されないようです。
+背景のグラフィックのせいで文字が見づらいので
+> UI>Image
 
-Camvas内にImageとTextを両方配置すると、CanvasのInspectorのチェックを外したときに、ImageもTextも同時に非表示になります。
+を文字の背景として作成し、HierarchyウィンドウのCanvas内にText1と同じ階層に配置します（drag & dropで移動できます）。  
+このとき、Hierarchyウィンドウで見てImageをTextより上に置くことで、画面上の前後関係でImageを奥にします。  
+※ImageとTextは2Dのオブジェクトなので、InspectorのRect TransformでPos Zを変更しても奥行に反映されないようです。
+
+Canvas内にImageとTextを両方配置すると、CanvasのInspectorのチェック（↓の右図）を外したときに、ImageもTextも同時に非表示になります（親子関係による）。
 
 
 ![image](https://user-images.githubusercontent.com/5643842/128685294-2fa89ec8-0a2b-416d-84c9-c54eda7ef08e.png) ![image](https://user-images.githubusercontent.com/5643842/128685315-c3f2cfda-30fe-42a7-a52b-7bd5b977cde0.png)
@@ -55,14 +60,13 @@ public class NewBehaviourScript : MonoBehaviour
 {
     GameObject[] cubes;
 
-    // Start is called before the first frame update
     void Start()
     {
         cubes = new GameObject[500];
         float radi = 2.0f;
         float csize = 0.1f;
 
-        for (int i = 0; i < cubes.Length; i++)
+        for (int i = 0; i < cubes.Length; i++)//cubes.Lengthはcubesの個数
         {
             cubes[i] = GameObject.CreatePrimitive(PrimitiveType.Cube);
             cubes[i].name = "Cube" + i.ToString();
@@ -70,7 +74,7 @@ public class NewBehaviourScript : MonoBehaviour
             float yy = Random.Range(-1f * radi, 1f * radi);
             //float zz = Random.Range(Camera.main.transform.position.z, 0f);
             //↑z=カメラのZ位置(-30にUnity上で設定)～0
-            //簡易的に重なりを防ぐ：Z値の位置をずらす
+            //↓簡易的に重なりを防ぐ：Z値の位置をずらす
             float dz = Camera.main.transform.position.z / cubes.Length;
             float zz = Random.Range(dz * i, dz * (i + 1) - csize);
             cubes[i].transform.position = new Vector3(xx, yy, zz);
@@ -120,12 +124,12 @@ public class NewBehaviourScript : MonoBehaviour
 }
 ```
 
-追加1. 
+**追加1. **
 開始直後に停止したいので、以下をStart関数内に加えています。
 StartCoroutine(WaitProcess());      
 ちなみに最初からHierarchyウィンドウにあるオブジェクトはこのスクリプトが処理される時点で既に生成されていますので、説明テキストなどはこの時点で存在しています。
 
-追加2. 
+**追加2. **
 更に、WaitProcess関数を作成します。
 待った後に、cubesの移動を開始するため、SetActiveでアクティブにしています。
 
@@ -134,11 +138,11 @@ StartCoroutine(WaitProcess());
 https://marunouchi-tech.i-studio.co.jp/2266/
 
 
-追加3.
+**追加3.**
 追加2に関連してcubesを最初に作成した際には非アクティブにしておきます。
 これでプログラム開始時にはcubesは非アクティブ、テキスト表示数秒後にはアクティブになります。
 
-追加4.
+**追加4.**
 追加2,3に関連して、アクティブなcubeのみ移動を適用するため、アクティブかどうか判定し、もしアクティブでなければcontinueで移動の処理をスキップしています。
 もしcubeが非アクティブでも移動処理をすると、非表示のまま位置は更新されていまいますので、このように処理を避ける必要があります。
 
@@ -189,7 +193,6 @@ public class NewBehaviourScript : MonoBehaviour
     Text text1;         //Text1コンポーネント取得用
     TextIntensity ti;   //TextIntensityコンポーネント取得用
 
-    // Start is called before the first frame update
     void Start()
     {
         cubes = new GameObject[500];
@@ -229,8 +232,10 @@ public class NewBehaviourScript : MonoBehaviour
 
 
 ### 9.2.3 数値入力
-Hierarchyウィンドウから再び　UI＞Text　を選びTextIntensityにリネームして追加します。
-Inspectorからスクリプトコンポーネントを追加します。スクリプトのファイル名はTextIntensityにしました。
+Hierarchyウィンドウから再び
+> UI＞Text
+を選びTextIntensityにリネームして追加します。  
+Inspectorからスクリプトコンポーネントを追加します。スクリプトのファイル名はTextIntensityにしました。  
 内容は以下になります。
 
 ```
