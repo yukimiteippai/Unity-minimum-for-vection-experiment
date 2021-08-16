@@ -59,7 +59,7 @@ Unityで開くと以下のPackage Managerの左側に追加したアセットが
 
 Package managerやAsset storeはUnityのメニューのWindowからもアクセスできるようです（後者は私の環境では結局ウェブに飛ばされました）。
 
-この章で参考にしたウェブ：https://styly.cc/ja/tips/asset-store/
+この章で参考にしたウェブ：https://styly.cc/ja/tips/asset-store/ 
 
 
 
