@@ -40,7 +40,7 @@ Unity-minimum-for-vection-experimentのメインページ右上の緑のCodeボ�
 8. 背景を指定する：スカイボックス
 
 ### unity4:
-9. UI
+9. UI:テキストやボタン
 
 ### unity5:
 10. 実験の繰り返し
