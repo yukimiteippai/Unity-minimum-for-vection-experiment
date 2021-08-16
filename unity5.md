@@ -5,9 +5,9 @@ Enterキー（Returnキー）を押したら実験を繰り返すように変更
 NewBehaiviourScript.cs (Emptyのスクリプトコンポーネント)を変更します。
 
 1. 冒頭に以下を追加します。
-
-> using UnityEngine.SceneManagement;
-
+```c#
+using UnityEngine.SceneManagement;
+```
 2. クラス冒頭に説明文のstring変数（str1, str2）を定義します。
 StartおよびWaitProcess関数で代入していた説明文を上記の変数で置き換えます。
 
@@ -19,7 +19,7 @@ StartおよびWaitProcess関数で代入していた説明文を上記の変数�
 
 変更したコードが以下です。
 
-```
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
