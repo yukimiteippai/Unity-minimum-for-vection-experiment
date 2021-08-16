@@ -235,6 +235,7 @@ public class NewBehaviourScript : MonoBehaviour
 ### 9.2.3 数値入力
 Hierarchyウィンドウから再び
 > UI＞Text
+
 を選びTextIntensityにリネームして追加します。  
 Inspectorからスクリプトコンポーネントを追加します。スクリプトのファイル名はTextIntensityにしました。  
 内容は以下になります。
