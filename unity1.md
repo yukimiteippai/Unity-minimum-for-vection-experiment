@@ -97,6 +97,6 @@ Transformはオブジェクトの位置や方向、大きさを設定するも�
 w/e/rでposition/rotate/scaleのUIを切り替えることができます（図）。
 
 
-![image](https://docs.unity3d.com/uploads/Main/TransformGizmo35.png)
+![image](https://docs.unity3d.com/uploads/Main/TransformGizmo35.png) 
 
  
