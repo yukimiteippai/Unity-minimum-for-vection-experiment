@@ -34,9 +34,10 @@ Inspectorに追加されたSkyboxは最初はNoneになっています。Noneの
 ![image](https://user-images.githubusercontent.com/5643842/128003730-67508bf5-78eb-4dc0-ad8f-f206e5b03cc0.png) ![image](https://user-images.githubusercontent.com/5643842/128003736-5b08ecd4-b31a-49ad-bff2-748673b14a29.png)
 
 
-しかし数があまりないので、UnityのAsset storeから無料のものをDLしましょう。
-Unity Asset Store https://assetstore.unity.com/?locale=ja-JP
-上部の検索ボックスにskyboxといれて、表示順を価格の安い順にすると、FREEのアセットがたくさん出てきます。好きなものを選んで「マイアセットに追加する」「Unityで開く」と進んでください。
+しかし選べるアセットの数があまりないので、UnityのAsset store(以下のURL)から無料のものをDLしましょう。  
+> Unity Asset Store https://assetstore.unity.com/?locale=ja-JP  
+
+サイト上部の検索ボックスにskyboxといれて、表示順を価格の安い順にすると、FREEのアセットがたくさん出てきます。好きなものを選んで「マイアセットに追加する」「Unityで開く」と進んでください。
 
 
 ![image](https://user-images.githubusercontent.com/5643842/128003776-bff843ed-41bd-4264-b980-04c1b85ff085.png) → ![image](https://user-images.githubusercontent.com/5643842/128003783-38dd4d42-6ec7-46f7-b6a2-22e6d2c6a28d.png)
@@ -48,7 +49,7 @@ Unityで開くと以下のPackage Managerの左側に追加したアセットが
 ![image](https://user-images.githubusercontent.com/5643842/128003799-ded9eb14-0f69-4c1c-a82c-72a62c1ee3bf.png)→![image](https://user-images.githubusercontent.com/5643842/128003820-afa557c3-8ff3-481f-b173-c94cfe687585.png)
 
 
-更に以下のようなウィンドウとボタンが出ますので、Importを押します。すると、MainCameraのSkyboxの◎ボタンから追加したアセットが選べるようになっています。適用した結果も下に並べています。
+更に以下のようなウィンドウとボタンが出ますので、Importを押します。すると、MainCameraのSkyboxの◎ボタンから追加したアセットが選べるようになっています。アセットを選ぶと新たなskyboxが適用され、その結果は以下のようになります。
  
  
  ![image](https://user-images.githubusercontent.com/5643842/128004848-42c7f7b5-1fb8-4b42-a2a7-92ad0d4655a0.png)→![image](https://user-images.githubusercontent.com/5643842/128004861-af1d05ee-f5b1-4ed2-9be7-2a5914533bd5.png) ![image](https://user-images.githubusercontent.com/5643842/128004868-2237229a-7043-48f1-b8fc-c7e0e4be7de9.png)
