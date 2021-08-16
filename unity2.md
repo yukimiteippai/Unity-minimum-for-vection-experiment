@@ -44,7 +44,7 @@ C＃が編集でき、付随して必要となるライブラリなどの導入�
 
 ### 6.2.4. 以下のスクリプトからcubeを作成します。
 
-``` 
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -89,7 +89,7 @@ Gameウィンドウでは最初にHierarchyから追加したcubeのほかにも
 
 ### 6.2.5. 作成したcubeをプログラムから設定します。
 なにがプログラムできるかは、Unity上でEmptyのInspectorにあるもの、と考えるとわかりやすいです（が、色々な設定の仕方があります）。
-```
+```c#
 void Start()
 {
     GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -111,7 +111,7 @@ void Start()
 
 
 プログラムを以下のように変更して、オブジェクトがこちらに近づいて来るようにします。
-```
+```c#
 public class NewBehaviourScript : MonoBehaviour
 {
     GameObject cube;
@@ -154,7 +154,7 @@ https://squmarigames.com/2018/11/08/unity-beginner-translate/#toc2
 ここでは配列やfor分の基礎は知っているという前提で進めます。
 先ほどまでのプログラムをベースに変更していきます。
 
-```
+```c#
 GameObject[] cubes;
 //↑カーソルをcubeに合わせてCtrl+rでcubeをcubesに変更。これは単純にわかりやすくするため。右クリックで名前の変更を選んでも一緒。そして配列に変更しています。
 
@@ -223,7 +223,7 @@ Camera.main.transform.position.zはMain Cameraのz位置です。
 これは単純にFixedUpdate()内でそのように処理するだけです。
 注意としては、x,yの値は変えないようにすることです。
 
-```
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
