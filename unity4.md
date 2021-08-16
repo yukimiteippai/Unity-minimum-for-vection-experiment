@@ -51,7 +51,7 @@ Canvas内にImageとTextを両方配置すると、CanvasのInspectorのチェ�
 待ち時間の参考：https://ekulabo.com/coroutine-wait
 
 上記のページを参考に作成したプログラムが以下になります。
-```
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -152,7 +152,7 @@ StartCoroutine(WaitProcess());
 今回の実験では、一定時間cubesを移動させた後、ベクションの強度を矢印キーで入力します。このとき、説明のためのテキストも表示します。最初に表示したテキストを変更し、再度表示してみましょう。
 まず、cubesの移動時間をt秒として、先ほど同様WaitForSecondsでcubesの移動時間だけ待ちます。
 
-```
+```c#
 IEnumerator WaitProcess()
 {        
     yield return new WaitForSeconds(2f);    
@@ -186,7 +186,7 @@ IEnumerator WaitProcess()
 
 WaitProcessを上記のように、プログラムの冒頭を下記のように変えると、t秒後に最初と同じテキストが表示されます。WaitProcessの最後のコメントアウトを取ると最後に表示されるテキストが変わります。
 
-```
+```c#
 public class NewBehaviourScript : MonoBehaviour
 {
     GameObject[] cubes;
@@ -240,7 +240,7 @@ Hierarchyウィンドウから再び
 Inspectorからスクリプトコンポーネントを追加します。スクリプトのファイル名はTextIntensityにしました。  
 内容は以下になります。
 
-```
+```c#
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
