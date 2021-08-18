@@ -1,3 +1,10 @@
+※以下の記事の第1,2章はUnity公式チュートリアルで置き換え可能です。
+特にMacの方は公式の方を参考にしてください。  
+**＜Unity公式：初めてUnityをインストールする手順について＞**
+- [Win編](https://forpro.unity3d.jp/tutorial/unity-install-windows/?elqTrackId=efe7c226e29b4b21aa237f9a2102c2ce&elqaid=2114&elqat=2&_ga=2.152760508.405987979.1629271663-86894262.1627614243)
+- [Mac編](https://forpro.unity3d.jp/tutorial/unity-install-mac/)
+
+
 # １．Unity hubのダウンロード
 Unity Hubをインストールしてください。
 https://unity3d.com/get-unity/download
