@@ -214,13 +214,13 @@ void FixedUpdate()
 視界から消えたオブジェクトを繰り返し初期位置に戻して動かすようにしましょう。
 プログラム全体は最後に記載しています。
 
-8.1. カメラの位置を調整する。　　
+#### 8.1. カメラの位置を調整する。　　
 図と同じに設定しましょう。  
 
 ![image](https://user-images.githubusercontent.com/5643842/127971711-adac0c91-a879-4081-bc8d-1bcd680cb9ae.png)
 
  
-8.2. cubesのZ値をばらつかせる（カメラのZ位置から0までの間でランダムに）  
+#### 8.2. cubesのZ値をばらつかせる（カメラのZ位置から0までの間でランダムに）  
 一つ一つのcubeの位置を乱数で以下のように決めるとz値をばらつかせることができます。
 ```c#
 float zz = Random.Range(Camera.main.transform.position.z, 0f);
@@ -236,8 +236,15 @@ Camera.main.transform.position.zはMain Cameraのz位置です。
 この辺の少し詳しいことは以下のリンクを参照するとよいです。他のGameObjectへのアクセス方法がわかります。  
 参考：https://tech.pjin.jp/blog/2018/01/31/unity_get-main-camera/
 
+csizeはcubeの大きさを表す新たな変数です。以下のような変数の定義と初期値の代入をStart関数の最初の方に追加してみましょう
+```c#
+float csize = 0.1f;//cubeの大きさ
+```
+また、数字のあとにfが付いているのは、float型であると明示するためです。0.1だけだとdouble型などとしても解釈できるため、ここではfを付けないとエラーとなる人もいると思います（エディターの設定などにもよります）。  
+参考：https://atmarkit.itmedia.co.jp/ait/articles/0405/07/news065.html
 
-8.3. cubesがカメラより後ろに行ったら、位置をz=0に戻す  
+
+#### 8.3. cubesがカメラより後ろに行ったら、位置をz=0に戻す  
 これは単純にFixedUpdate()内でそのように処理するだけです。  
 注意としては、x,yの値は変えないようにすることです。
 
