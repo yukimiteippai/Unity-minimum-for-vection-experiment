@@ -33,8 +33,7 @@ Emptyを選択したときのInspectorは図のようになります。
 > new script→create and add　と選択してください。
 
 Create and addのとき、スクリプト名を編集できます。  
-デフォルトではNewBehaviorScriptになります。  
-ここではデフォルトの名前のまま進みます。
+ここではNewBehaviorScriptという名前にし、今後の説明でもそう記載します。
 
 
 ### 3. スクリプトを開く
