@@ -262,7 +262,7 @@ Mesh createMeshDynamic()
 ```
 
 #### ガラスっぽいマテリアル
-おまけでガラスっぽいマテリアルglass_002.matを共有しておきます。
+おまけでガラスっぽいマテリアル[glass_002.mat](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/glass_002.mat)を共有しておきます。
 
 
 
