@@ -78,13 +78,12 @@ public class NewBehaviourScript : MonoBehaviour
     IEnumerator WaitProcess()
     {
         /*変化なし*/
-        canvas.SetActive(false);
+        canvas.SetActive(true);
 
         //動き始めの時間
         timeFirstMove = Time.time;
-
-        float t = 2f;//cubesの移動時間
-        /*変化なし*/
+        
+        text1.text = str2;
         ti.setVisible(true);
     }
 }
@@ -145,7 +144,7 @@ public class LogSave
 ここでは、作ったファイルに追加で文字列を書き込む処理を行っています。
 
 次に、LogSaveクラスをNewBehaiviourScriptクラス内で以下のように定義します。
-```
+```c#
 static LogSave csv = null;
 ```
 **static**キーワードは静的メンバーを作成するときに使用します。静的メンバーとは、変数や、メソッド等を、インスタンス単位で生成するのではなく、アプリケーションにただ１つだけ生成したいときに使用します。  
@@ -160,18 +159,22 @@ newした後はnullではなくなるので、最初の実験の時だけnewさ�
 
 logSaveは一度の実験が終わりEnterを押されたときに呼ばれるようにします。
 この時に保存したい情報をlogSaveに渡すことでファイルに記述されます。
-```
+```c#
 csv.logSave("," + timeToRecognize + "," + timeAllPush + "," + ti.getScore());
 ```
 time＊＊は全てfloatですが、そのまま文字列型のstringとして、ここでは渡すことができます。
 **getScore**関数↓は新たにTextIntensity.csに加えましょう。
-```
+```c#
     public string getScore() { 
         return score.ToString();
     }
 ```
 文字列は+で繋ぐことができます。  
 ここではデータの間に”,”を入れることで、csvファイル内でのセルの区切りを表します。
+
+#### できたCSVファイルはどこにある？
+この例で言う「New Unity Project」フォルダ内にあります。
+AssetsProjectウィンドウからAssetsを右クリックしShowInExplorerを選ぶとそのフォルダが開ける（Assetsフォルダと同じところにあるので）。
 
 
 ### 解説2：その他
@@ -183,8 +186,80 @@ time＊＊は全てfloatですが、そのまま文字列型のstringとして�
 
 ### 最後に
 最後に課題を課すなら、cubeではなくsphere（またはその他の形状など）にしてみる、複数の素材を使う、などして面白いシーンを作るとよいと思います。
+この入門では扱いませんでしたが、テクスチャや法線を与えるnormal mapなどを使うのも面白いですし、TrailなどのGameObjectを使うのもベクション的に面白そうです。
 お疲れさまでした。
 
+最後におまけで、GameObjectの3D ObjectのQuadなどのMeshの頂点にアクセスして、スクリプトから以下のような形状を作成する関数を載せます。
+※2個目の図は更につぶつぶのNormal mapを適用したものです。
+
+![image](https://user-images.githubusercontent.com/5643842/130216816-b7bbf7d7-e6b6-4000-a55f-3ac0b6eb1f86.png)　![image](https://user-images.githubusercontent.com/5643842/130216925-a1af946f-4639-4f8c-8f4a-80e17e1e0f54.png)
+
+
+
+#### 形状作成スクリプト
+```c#
+Mesh createMeshDynamic()
+{
+    int siz = 120;//一辺の頂点数
+    float intv = 0.5f;//頂点の間隔
+    Mesh mesh0 = new Mesh();
+    Vector3[] newVertices = new Vector3[siz * siz];
+    Vector2[] newUV = new Vector2[siz * siz];
+    int[] newTriangles = new int[(siz ) * (siz ) * 2 * 3];//(siz - 1)*(siz - 1)=num of rect
+
+    float r = 1f;//円の基本的な半径
+    float psc = 15f;// gw.GetComponent<Gwave>().meshPSC;//perlin noiseのscaling
+    float ph = 2f;// gw.GetComponent<Gwave>().meshBump;//凹凸具合
+    for (int j = 0; j < siz; j++){
+        for (int i = 0; i < siz; i++){
+            {   
+                int id = i + j * siz;
+                float ang = (float)i / (siz-1);
+                float pi = (float)i / (siz-1) * psc;
+                float pj = (float)j / (siz-1) * psc;
+                float rr = Mathf.PerlinNoise(pi, pj);
+                    
+                if (i >= siz-1 - 10 || i <= 10)
+                {
+                    pi = (float)Mathf.Abs(siz - 1 - i) / (siz - 1) * psc;                                                
+                    rr = rr + Mathf.PerlinNoise(pi, pj) ;
+                    rr /= 2f;                        
+                }
+
+                float x = Mathf.Cos(ang * Mathf.PI * 2f) * (r + rr * ph);
+                float y = Mathf.Sin(ang * Mathf.PI * 2f) * (r + rr * ph);
+                newVertices[id] = new Vector3(x, y, j * intv);
+                newUV[id] = new Vector2((float)i / (siz-1), (float)j / (siz - 1));//normalize
+            }        
+            {
+                int ip = i + 1;
+                int jp = j + 1;
+                if (ip >= siz ) continue;
+                if (jp >= siz ) continue;
+                int id = i + j * (siz );//id of rect
+                newTriangles[id * 2 * 3 + 0] = i + j * siz;
+                newTriangles[id * 2 * 3 + 1] = i + jp * siz;
+                newTriangles[id * 2 * 3 + 2] = ip + jp * siz;
+                newTriangles[id * 2 * 3 + 3] = ip + jp * siz;
+                newTriangles[id * 2 * 3 + 4] = ip + j * siz;
+                newTriangles[id * 2 * 3 + 5] = i + j * siz;
+            }
+        }
+    }
+
+    mesh0.vertices = newVertices;
+    mesh0.uv = newUV;
+    mesh0.triangles = newTriangles;
+
+    mesh0.RecalculateNormals();
+    mesh0.RecalculateBounds();
+
+    GetComponent<MeshFilter>().sharedMesh = mesh0;
+    GetComponent<MeshFilter>().sharedMesh.name = "myMesh";
+
+    return mesh0;
+}
+```
 
 ### 目次とリンク
 - [unity1:Unityのダウンロード、ウィンドウ](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity1.md)
