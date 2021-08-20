@@ -22,6 +22,22 @@ Albedo以外にも様々な項目があり、金属ぽくしたり、テクス�
 詳しくは以下のURLなどを見て、好みの材質を指定してみてください。
 参考：https://unity-guide.moon-bear.com/material/#toc5
 
+### スクリプトから材質を指定する方法
+色々ありますが、二つ紹介します。※この後の資料では使っていません。
+
+```c#
+//色やMetallicを指定する方法
+cubes[i].GetComponent<Renderer>().material.color = Color.green;
+cubes[i].GetComponent<Renderer>().material.SetFloat("_Metallic", 1.0f);//cubeだとメタリックはわかりにくいですが…
+```
+```c#
+//既にあるMaterialをコピーする方法
+//↓forの前でゲームオブジェクトを見つけておく
+GameObject cube = GameObject.Find("Sphere");
+//↓forの最後あたりでcubeの材質をコピー
+cubes[i].GetComponent<Renderer>().material = cube.GetComponent<Renderer>().material;
+```
+
 # 8. 背景を指定する：スカイボックス
 
 背景を指定するスカイボックスを設定します。
