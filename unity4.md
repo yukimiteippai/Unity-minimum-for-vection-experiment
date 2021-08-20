@@ -187,12 +187,16 @@ IEnumerator WaitProcess()
 WaitProcessを上記のように、プログラムの冒頭を下記のように変えると、t秒後に最初と同じテキストが表示されます。WaitProcessの最後のコメントアウトを取ると最後に表示されるテキストが変わります。
 
 ```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;//追加：Textを使うため
+
 public class NewBehaviourScript : MonoBehaviour
 {
     GameObject[] cubes;
-    GameObject canvas;  //Ganvasオブジェクト取得用
-    Text text1;         //Text1コンポーネント取得用
-    TextIntensity ti;   //TextIntensityコンポーネント取得用
+    GameObject canvas;  //追加：Ganvasオブジェクト取得用
+    Text text1;         //追加：Text1コンポーネント取得用
 
     void Start()
     {
@@ -213,22 +217,19 @@ public class NewBehaviourScript : MonoBehaviour
             float zz = Random.Range(dz * i, dz * (i + 1) - csize);
             cubes[i].transform.position = new Vector3(xx, yy, zz);
             cubes[i].transform.localScale = new Vector3(csize, csize, csize);
-            cubes[i].SetActive(false);
+            cubes[i].SetActive(false);//追加
         }
-        //Canvasを取得してcanvasに代入
+        //追加：Canvasを取得してcanvasに代入
         canvas = GameObject.Find("Canvas");
         //componentの取得↓子階層のComponentを取得する
-        text1 = canvas.GetComponentInChildren<Text>();
-        ti = canvas.GetComponentInChildren<TextIntensity>();
-        //テキストの設定
+        text1 = canvas.GetComponentInChildren<Text>();        
+        //追加：テキストの設定
         text1.text = "動きを知覚している間スペースを押し続けてください\n（escで実験を強制終了）";
         ti.setVisible(false);
 
         StartCoroutine(WaitProcess());      
     }
 ```
-
-
 
 
 
@@ -241,6 +242,8 @@ Inspectorからスクリプトコンポーネントを追加します。スク�
 内容は以下になります。
 
 ```c#
+//TextIntensity.csファイル
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -285,6 +288,13 @@ setVisibleではbbがtrueの場合テキストを黒、falseの場合透明に�
 参考：https://techno-monkey.hateblo.jp/entry/2018/05/09/120653
 
 setActiveを使った場合、一度非アクティブにしてしまうと以降のコンポーネントへのアクセスがエラーになってしまうので、ここでは透明色を使いました。
+
+**Rect Transformの設定**  
+このとき、二つのTextの位置やテキストボックスの大きさが適切に設定されていないと、文章が全て表示されなかったり、二つのテキストが重なってしまったりします。
+Gameウィンドウなどを見ながら、上手くUnityでサイズを調整してください。
+
+
+
 最後はこうなるはずです↓
 
 
