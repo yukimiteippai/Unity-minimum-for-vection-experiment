@@ -181,6 +181,10 @@ time＊＊は全てfloatですが、そのまま文字列型のstringとして�
 時間の取得にはTime.timeというシーン開始から経過した時間を使っています。  
 ついでにエスケープキーを押したら実験を終了するようにしています。  　
 
+### 最後に
+最後に課題を課すなら、cubeではなくsphere（またはその他の形状など）にしてみる、複数の素材を使う、などして面白いシーンを作るとよいと思います。
+お疲れさまでした。
+
 
 ### 目次とリンク
 - [unity1:Unityのダウンロード、ウィンドウ](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity1.md)
@@ -188,4 +192,4 @@ time＊＊は全てfloatですが、そのまま文字列型のstringとして�
 - [unity3:材質の指定、スカイボックス](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity3.md)
 - [unity4:UI](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity4.md)
 - [unity5:実験の繰り返し](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity5.md)
-- [unity6:ファイル出力](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity6.md)
+- [unity6:ファイル出力](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity6.md)(★here)
