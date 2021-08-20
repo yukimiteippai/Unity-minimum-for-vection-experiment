@@ -178,7 +178,7 @@ IEnumerator WaitProcess()
     }
     //CanvasをActiveにする　※以前はここでcanvasを定義していたがclassの最初にメンバとして定義に変更。findはStartで。
     canvas.SetActive(true);
-    //表示テキストを変える　※
+    //表示テキストを変える
     //text1.text = "上下の矢印で強度を入力しEnterキーを押す";
     //ti.setVisible(true);
 }
@@ -288,6 +288,27 @@ setVisibleではbbがtrueの場合テキストを黒、falseの場合透明に�
 参考：https://techno-monkey.hateblo.jp/entry/2018/05/09/120653
 
 setActiveを使った場合、一度非アクティブにしてしまうと以降のコンポーネントへのアクセスがエラーになってしまうので、ここでは透明色を使いました。
+
+**NewBehaiviourScript.csへのコードの追加**  
+
+以下の3つをNewBehaiviourに追加して、TextIntensityを使います。
+
+```c#
+//NewBehaiviourScriptクラスの最初にクラスメンバとして定義
+TextIntensity ti;   //TextIntensityコンポーネント取得用
+```
+```c#
+//Start関数内のStartCoroutineの前など
+ti = canvas.GetComponentInChildren<TextIntensity>();//Canvasの子階層のTextIntensityを取得
+ti.setVisible(false);//TextIntensityのsetVisible関数を呼び出し。falseで透明にする。
+```
+```c#
+//WaitProcess()の最後のコメントアウトをとる↓
+
+//表示テキストを変える
+text1.text = "上下の矢印で強度を入力しEnterキーを押す";
+ti.setVisible(true);
+```
 
 **テキストのRect Transformの設定**  
 このとき、二つのTextの位置やテキストボックスの大きさが適切に設定されていないと、文章が全て表示されなかったり、二つのテキストが重なってしまったりします。
