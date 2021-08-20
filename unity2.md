@@ -152,7 +152,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
 }
 ```
-参考：下記のページでは矢印キーでオブジェクトを動かすプログラムが記載されています。
+参考：下記のURLでは矢印キーでオブジェクトを動かすプログラムが記載されています。  
 https://squmarigames.com/2018/11/08/unity-beginner-translate/#toc2
  
 
