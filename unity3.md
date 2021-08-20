@@ -33,7 +33,7 @@ cubes[i].GetComponent<Renderer>().material.SetFloat("_Metallic", 1.0f);//cubeだ
 ```c#
 //既にあるMaterialをコピーする方法
 //↓forの前でゲームオブジェクトを見つけておく
-GameObject cube = GameObject.Find("Sphere");
+GameObject cube = GameObject.Find("Cube");
 //↓forの最後あたりでcubeの材質をコピー
 cubes[i].GetComponent<Renderer>().material = cube.GetComponent<Renderer>().material;
 ```
