@@ -6,7 +6,7 @@
 
 
 自分で指定したMaterialを使用する場合は、
-> Projectウィンドウの＋ボタン＞Material
+> ProjectウィンドウのAssetsを選択＞左上の＋ボタンを押す＞Material
 
 を選んでください。するとProjectウィンドウのAssets内にNew Material（これはデフォルト名で、指定することもできます）が作成されます。
 
@@ -22,21 +22,21 @@ Albedo以外にも様々な項目があり、金属ぽくしたり、テクス�
 詳しくは以下のURLなどを見て、好みの材質を指定してみてください。
 参考：https://unity-guide.moon-bear.com/material/#toc5
 
-### スクリプトから材質を指定する方法
-色々ありますが、二つ紹介します。※この後の資料では使っていません。
-
+### スクリプトでの材質の指定
+今回の場合の例を二つ以下に載せておきます。
 ```c#
-//色やMetallicを指定する方法
+//例１：cubesの色やMetallicを指定する
 cubes[i].GetComponent<Renderer>().material.color = Color.green;
 cubes[i].GetComponent<Renderer>().material.SetFloat("_Metallic", 1.0f);//cubeだとメタリックはわかりにくいですが…
 ```
-```c#
-//既にあるMaterialをコピーする方法
-//↓forの前でゲームオブジェクトを見つけておく
+```c#   
+//例２:他で使っている材質をコピーする
+//↓これはforの前に書きましょう
 GameObject cube = GameObject.Find("Cube");
-//↓forの最後あたりでcubeの材質をコピー
+//↓これはforの最後などに書きましょう
 cubes[i].GetComponent<Renderer>().material = cube.GetComponent<Renderer>().material;
 ```
+
 
 # 8. 背景を指定する：スカイボックス
 
@@ -83,7 +83,7 @@ Package managerやAsset storeはUnityのメニューのWindowからもアクセ�
 ### 目次とリンク
 - [unity1:Unityのダウンロード、ウィンドウ](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity1.md)
 - [unity2:GameObjectの作成と移動](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity2.md)
-- [unity3:材質の指定、スカイボックス](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity3.md)(★here)
+- [unity3:材質の指定、スカイボックス](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity3.md)(here)
 - [unity4:UI](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity4.md)
 - [unity5:実験の繰り返し](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity5.md)
 - [unity6:ファイル出力](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity6.md)
