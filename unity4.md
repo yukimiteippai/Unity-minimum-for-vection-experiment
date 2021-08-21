@@ -301,7 +301,7 @@ ti = canvas.GetComponentInChildren<TextIntensity>();//Canvasの子階層のTextI
 ti.setVisible(false);//TextIntensityのsetVisible関数を呼び出し。falseで透明にする。
 ```
 ```c#
-//WaitProcess()の最後のコメントアウトをとる↓
+//WaitProcess()の最後
 
 //表示テキストを変える
 text1.text = "上下の矢印で強度を入力しEnterキーを押す";
