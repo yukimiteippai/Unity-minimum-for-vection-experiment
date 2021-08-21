@@ -25,12 +25,12 @@ Albedo以外にも様々な項目があり、金属ぽくしたり、テクス�
 ### スクリプトでの材質の指定
 今回の場合の例を二つ以下に載せておきます。
 ```c#
-//例１：cubesの色やMetallicを指定する
+//例１：cubesの色やMetallicを指定する＠Start関数のfor文最後など
 cubes[i].GetComponent<Renderer>().material.color = Color.green;
 cubes[i].GetComponent<Renderer>().material.SetFloat("_Metallic", 1.0f);//cubeだとメタリックはわかりにくいですが…
 ```
 ```c#   
-//例２:他で使っている材質をコピーする
+//例２:他で使っている材質をコピーする＠Start関数内
 //↓これはforの前に書きましょう
 GameObject cube = GameObject.Find("Cube");
 //↓これはforの最後などに書きましょう
