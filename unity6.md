@@ -105,8 +105,7 @@ public class LogSave
         //filename = @"C:/Users/yuki/Documents/FileName" + day + ".csv";
         //↑このように絶対パスでフォルダ位置を指定することもできる
         filename = "FileName" + day + ".csv";
-        //↑Assetsと同じフォルダに保存される。
-        //ProjectウィンドウからAssetsを右クリックしShowInExplorerを選ぶとフォルダが開ける
+        //↑Assetsと同じフォルダに保存される。        
 
         fi = new FileInfo(filename);
         //fi = new FileInfo(Application.dataPath + "../FileName.csv");
@@ -173,9 +172,9 @@ time＊＊は全てfloatですが、そのまま文字列型のstringとして�
 ここではデータの間に”,”を入れることで、csvファイル内でのセルの区切りを表します。
 
 #### できたCSVファイルはどこにある？
-この例で言う「New Unity Project」フォルダ内にあります。
-AssetsProjectウィンドウからAssetsを右クリックしShowInExplorerを選ぶとそのフォルダが開ける（Assetsフォルダと同じところにあるので）。
-
+この例で言う「New Unity Project」フォルダ内にあります。  
+- Win: AssetsProjectウィンドウからAssetsを右クリックし**ShowInExplorer**を選ぶとそのフォルダが開ける（Assetsフォルダと同じところにあるので）。  
+- Mac: Winとほぼ同じですが、Macの場合は右クリック後、**Reveal in Finder**を選んでください。
 
 ### 解説2：その他
 他に、time＊＊でベクションの実験で取得したいデータを取得しています。
