@@ -5,7 +5,7 @@
 - [Mac編](https://forpro.unity3d.jp/tutorial/unity-install-mac/)
 
 
-# １．Unity hubのダウンロード
+# 1.1 Unity hubのダウンロード
 Unity Hubをインストールしてください。
 https://unity3d.com/get-unity/download
 
@@ -22,7 +22,7 @@ Unityだけで3.5GB、Visual Studioだけで最低5GB、SSDやHDDの空き領域
 
 本資料ではWindowsを前提に進めているので、多少Macの場合は自分で調べて補う必要があるかもしれません。
 
-# ２．Unityのダウンロード
+# 1.2 Unityのダウンロード
 Unity Hubを起動し、インストールの項目からUnityをインストールしてください。  
 この資料では2020.3.14f1のバージョンを使います(2021のバージョンがこの資料を書いている間にリリースされました…多分こちらでもそんなに違いはないと思います)。
 
@@ -32,7 +32,7 @@ Unity Hubを起動し、インストールの項目からUnityをインストー
 
  
 
-# ３．プロジェクトの新規作成
+# 1.3 プロジェクトの新規作成
 Unity Hubの右上のボタン「新規作成」を押す
 
 テンプレートやプロジェクト名や保存先が選べる。
@@ -53,7 +53,7 @@ https://baba-s.hatenablog.com/entry/2021/07/14/180000
 
 
 
-# ４．HierarchyウィンドウとGameObject
+# 1.4 HierarchyウィンドウとGameObject
 
 ![image](https://user-images.githubusercontent.com/5643842/127955498-21211fe9-67e4-4c74-ba97-03256bf384a6.png)
 
@@ -71,7 +71,7 @@ HierarchyにはSampleSceneの中にMain CameraとDirectiona Lightがあり、シ
 
 
 
-# ５．GameObjectのCameraとScene・Game・Inspectorウィンドウ
+# 1.5 GameObjectのCameraとScene・Game・Inspectorウィンドウ
 今あるMainCameraを選択すると、Sceneウィンドウ、Inspectorウィンドウではこのオブジェクトの情報の表示に切り替わります。
 オブジェクトの選択はSceneウィンドウ上でもクリックすることで行うことができます。
 
