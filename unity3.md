@@ -59,7 +59,7 @@ Inspectorに追加されたSkyboxは最初はNoneになっています。Noneの
 ![image](https://user-images.githubusercontent.com/5643842/128003776-bff843ed-41bd-4264-b980-04c1b85ff085.png) → ![image](https://user-images.githubusercontent.com/5643842/128003783-38dd4d42-6ec7-46f7-b6a2-22e6d2c6a28d.png)
 
 
-Unityで開くと以下のPackage Managerの左側に追加したアセットが表示されているので、選びます。すると右側にImportボタンが出てくるので押します。
+Unityで開くと以下のPackage Managerの左側に追加したアセットが表示されているので、選びます。右側に出てくるDownloadボタンを押し、その後、Importボタンが出てくるので押します。
 
 
 ![image](https://user-images.githubusercontent.com/5643842/128003799-ded9eb14-0f69-4c1c-a82c-72a62c1ee3bf.png)→![image](https://user-images.githubusercontent.com/5643842/128003820-afa557c3-8ff3-481f-b173-c94cfe687585.png)
