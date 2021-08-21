@@ -179,8 +179,7 @@ IEnumerator WaitProcess()
     //CanvasをActiveにする　※以前はここでcanvasを定義していたがclassの最初にメンバとして定義に変更。findはStartで。
     canvas.SetActive(true);
     //表示テキストを変える
-    //text1.text = "上下の矢印で強度を入力しEnterキーを押す";
-    //ti.setVisible(true);
+    //text1.text = "上下の矢印で強度を入力しEnterキーを押す";    
 }
 ```
 
@@ -224,8 +223,7 @@ public class NewBehaviourScript : MonoBehaviour
         //componentの取得↓子階層のComponentを取得する
         text1 = canvas.GetComponentInChildren<Text>();        
         //追加：テキストの設定
-        text1.text = "動きを知覚している間スペースを押し続けてください\n（escで実験を強制終了）";
-        ti.setVisible(false);
+        text1.text = "動きを知覚している間スペースを押し続けてください\n（escで実験を強制終了）";        
 
         StartCoroutine(WaitProcess());      
     }
