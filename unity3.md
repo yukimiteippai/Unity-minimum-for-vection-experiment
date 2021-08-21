@@ -45,7 +45,8 @@ cubes[i].GetComponent<Renderer>().material = cube.GetComponent<Renderer>().mater
 > MainCamera＞Inspector＞Add Component>Rendering>skybox
 
 を選びます。
-Inspectorに追加されたSkyboxは最初はNoneになっています。Noneの右の◎を押すといくつか選択肢が出てきます。SpatialMappingWireframeを選ぶと以下のような感じ。
+Inspectorに追加されたSkyboxは最初はNoneになっています。Noneの右の◎を押すといくつか選択肢が出てきます。SpatialMappingWireframeを選ぶと以下のような感じ。  
+**※Mac環境でSpatialMappingWireframeではうまくいかない報告がありました**
    
 ![image](https://user-images.githubusercontent.com/5643842/128003730-67508bf5-78eb-4dc0-ad8f-f206e5b03cc0.png) ![image](https://user-images.githubusercontent.com/5643842/128003736-5b08ecd4-b31a-49ad-bff2-748673b14a29.png)
 
