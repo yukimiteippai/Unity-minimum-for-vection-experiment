@@ -1,4 +1,4 @@
-# 7. 材質の指定
+# 3.1 材質の指定
 
 最初にHierarchyウィンドウで作成したCubeのInspectorを見てみましょう。以下のようなDefault-Materialというコンポーネントがあります。
 
@@ -38,7 +38,7 @@ cubes[i].GetComponent<Renderer>().material = cube.GetComponent<Renderer>().mater
 ```
 
 
-# 8. 背景を指定する：スカイボックス
+# 3.2 背景を指定する：スカイボックス
 
 背景を指定するスカイボックスを設定します。
 
