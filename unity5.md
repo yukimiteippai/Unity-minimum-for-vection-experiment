@@ -1,5 +1,5 @@
-# 10. 実験を繰り返す
-## 10.1 SceneManager.LoadScene
+# 5. 実験を繰り返す
+## 5.1 SceneManager.LoadScene
 
 Enterキー（Returnキー）を押したら実験を繰り返すように変更しましょう。
 NewBehaiviourScript.cs (Emptyのスクリプトコンポーネント)を変更します。
@@ -129,7 +129,7 @@ public class NewBehaviourScript : MonoBehaviour
 }
 ```
 
-## 10.2 Lightingの修正
+## 5.2 Lightingの修正
 SceneManager.LoadSceneでシーンをロードした場合、lightingがおかしくなります。
 Lightingウィンドウを開き、設定を変更しましょう。
 
