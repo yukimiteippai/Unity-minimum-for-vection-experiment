@@ -32,24 +32,24 @@ https://csharp.sevendays-study.com/
 
 
 ### [unity1:](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity1.md)
-1. Unity hubのダウンロード
-2. Unityのダウンロード
-3. プロジェクトの新規作成
-4. HierarchyウィンドウとGameObject
-5. GameObjectのCameraとScene・Game・Inspectorウィンドウ
+1.1 Unity hubのダウンロード
+1.2 Unityのダウンロード
+1.3 プロジェクトの新規作成
+1.4 HierarchyウィンドウとGameObject
+1.5 GameObjectのCameraとScene・Game・Inspectorウィンドウ
 
 ### [unity2:](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity2.md)
-6. GameObjectの作成と移動  
+2. GameObjectの作成と移動  
 
 ### [unity3:](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity3.md)
-7. 材質の指定
-8. 背景を指定する：スカイボックス
+3.1 材質の指定
+3.2 背景を指定する：スカイボックス
 
 ### [unity4:](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity4.md)
-9. UI:テキストやボタン
+4. UI:テキストやボタン
 
 ### [unity5:](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity5.md)
-10. 実験の繰り返し
+5. 実験の繰り返し
 
 ### [unity6:](https://github.com/yukimiteippai/Unity-minimum-for-vection-experiment/blob/main/unity6.md)
-11. ファイル出力 
+6. ファイル出力 
