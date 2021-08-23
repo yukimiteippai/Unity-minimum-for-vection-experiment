@@ -8,14 +8,14 @@ Hierarchyの＋ボタンから、　
 を選びます。
 
 Canvasの子としてTextが作られ、EventSystemも同時に作成されます。  
-（親子関係について：https://dkrevel.com/makegame-beginner/parent/）  
+親子関係についての参照：https://dkrevel.com/makegame-beginner/parent/  
 図の例ではText1にリネームしています↓
 
 ![image](https://user-images.githubusercontent.com/5643842/128685175-b275b8e3-e28e-4cbd-a5a5-c78024db61c2.png)
 
 
-InspectorのRect TransformやTextで、テキストボックスのサイズやテキストの編集ができます  
-（詳しくはこちらを参照：https://www.sejuku.net/blog/55029）。
+InspectorのRect TransformやTextで、テキストボックスのサイズやテキストの編集ができます。  
+詳しくはこちらを参照：https://www.sejuku.net/blog/55029
 
 ![image](https://user-images.githubusercontent.com/5643842/128685190-723932c4-64f8-4829-98a5-912314094465.png) ![image](https://user-images.githubusercontent.com/5643842/128685206-722fe746-a078-4e93-a65a-6232ddcffd03.png)
 
