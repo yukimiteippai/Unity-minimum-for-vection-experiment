@@ -1,9 +1,12 @@
 # 3.1 材質の指定
 
+材質はマテリアルによって指定できます。
+マテリアルとは マテリアルとは色や光沢、テクスチャの情報によって、金属やプラスチックなどの物質の材質を表現する概念です。
+Unityにはオブジェクトの材質表現をできるようにするためにマテリアルコンポーネントが用意されています。
+
 最初にHierarchyウィンドウで作成したCubeのInspectorを見てみましょう。以下のようなDefault-Materialというコンポーネントがあります。
 
 ![image](https://user-images.githubusercontent.com/5643842/128003563-8656b57f-a861-495e-9591-083cb2e649db.png)
-
 
 自分で指定したMaterialを使用する場合は、
 > ProjectウィンドウのAssetsを選択＞左上の＋ボタンを押す＞Material
@@ -11,7 +14,7 @@
 を選んでください。するとProjectウィンドウのAssets内にNew Material（これはデフォルト名で、指定することもできます）が作成されます。
 
 できたNew Materialを選択するとInspectorから様々な設定ができます（図）。
-とりあえずAlbedo（ベースカラー）を赤っぽく変更しました。
+とりあえずAlbedo（ベースとなる色のこと）を赤っぽく変更しました。
 
 ![image](https://user-images.githubusercontent.com/5643842/128003594-41c0dcdc-51eb-4124-b80b-cb0e6d796ed8.png) ![image](https://user-images.githubusercontent.com/5643842/128003601-d77ef944-c33a-4992-838c-e579c41bf406.png) ![image](https://user-images.githubusercontent.com/5643842/128003612-9de8b44d-9dab-428b-8831-2862322b9c66.png)
 
