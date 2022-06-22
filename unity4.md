@@ -6,6 +6,7 @@ Hierarchyの＋ボタンから、　
 > UI > Text
 
 を選びます。
+※このとき、日本語がうまく表示されない人はUI>Legacy>Textを選んでみてください。
 
 Canvasの子としてTextが作られ、EventSystemも同時に作成されます。  
 親子関係についての参照：https://dkrevel.com/makegame-beginner/parent/  
